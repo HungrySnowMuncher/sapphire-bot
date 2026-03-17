@@ -4,7 +4,7 @@ import subprocess
 from leafgreen_bot.config import MGBA_EXECUTABLE_PATH, LEAFGREEN_ROM_PATH
 
 
-class Interface:
+class GBAInterface:
     """ Provides an Interface to the GBA emulator. """
 
     def __init__(self):
@@ -17,7 +17,12 @@ class Interface:
         Returns:
             (bool): Whether the emulator was successfully launched.
         """
-        commands = [MGBA_EXECUTABLE_PATH, LEAFGREEN_ROM_PATH]
+        commands = [
+            MGBA_EXECUTABLE_PATH,
+            # Starts a GDB session.
+            "-g",
+            LEAFGREEN_ROM_PATH,
+        ]
         try:
             self._process = subprocess.Popen(commands)
             print(f"Launched {os.path.basename(MGBA_EXECUTABLE_PATH)} successfully.")
