@@ -16,7 +16,7 @@ def get_required_env(key: str) -> str:
 MGBA_EXECUTABLE_PATH = get_required_env("MGBA_EXECUTABLE_PATH")
 if not os.path.isfile(MGBA_EXECUTABLE_PATH):
     raise FileNotFoundError(f"MGBA executable not found: {MGBA_EXECUTABLE_PATH}")
-# LeafGreen file rom path.
-LEAFGREEN_ROM_PATH = get_required_env("LEAFGREEN_ROM_PATH")
-if not os.path.isfile(LEAFGREEN_ROM_PATH):
-    raise FileNotFoundError(f"Leafgreen rom not found: {LEAFGREEN_ROM_PATH}")
+# Sapphire file rom path.
+SAPPHIRE_ROM_PATH = get_required_env("SAPPHIRE_ROM_PATH")
+if not os.path.isfile(SAPPHIRE_ROM_PATH):
+    raise FileNotFoundError(f"Sapphire rom not found: {SAPPHIRE_ROM_PATH}")
