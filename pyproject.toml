@@ -1,5 +1,5 @@
 [project]
-name = "leafgreen_bot"
+name = "sapphire_bot"
 version = "0.0.1"
 description = "A bot designed to complete Pokémon LeafGreen."
 authors = [{ name = "Joshua Kouri" }]
